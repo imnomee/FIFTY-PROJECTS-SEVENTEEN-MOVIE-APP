@@ -52,10 +52,11 @@ main {
     width: 300px;
     margin: 1rem;
     background-color: var(--secondary-color);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 5px rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+    transition: var(--transition);
 }
 
 .movie img {
@@ -73,6 +74,10 @@ main {
 
 .movie-info h3 {
     margin-top: 0;
+    text-align: center;
+}
+.movie-info h3 span {
+    background-color: transparent;
 }
 .movie-info span {
     background-color: var(--primary-color);
@@ -104,4 +109,7 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+.movie:hover {
+    transform: scale(1.1);
 }

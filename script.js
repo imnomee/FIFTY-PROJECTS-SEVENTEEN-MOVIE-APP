@@ -21,14 +21,16 @@ getMovies(API_URL);
 function showMovies(movies) {
     main.innerHTML = '';
     movies.forEach((movie) => {
-        const { title, poster_path, vote_average, overview } = movie;
+        const { title, poster_path, release_date, vote_average, overview } =
+            movie;
+        const date = release_date.trim().split('-')[0];
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `<img src="${IMG_PATH + poster_path}" alt="${
             title + '_img'
         }" />
                 <div class="movie-info">
-                    <h3>${title}</h3>
+                    <h3>${title} - <span>${date}</h3>
                     <span class="${getRating(
                         vote_average
                     )}">${vote_average}</span>
