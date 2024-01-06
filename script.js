@@ -33,7 +33,7 @@ function showMovies(movies) {
                     <h3>${title} - <span>${date}</h3>
                     <span class="${getRating(
                         vote_average
-                    )}">${vote_average}</span>
+                    )}">${Number.parseFloat(vote_average).toFixed(1)}</span>
                 </div>
                 <div class="overview">
                     <h3>Overview</h3>
